@@ -9,7 +9,7 @@ body {
   font-family: "Raleway", sans-serif;
   min-height: 100vh;
   background: #0c122c url("../images/bg-desktop.png") no-repeat right bottom;
-  background-size: 100%;
+  background-size: 100% 50%;
   color: #dddbff;
   display: -ms-grid;
   display: grid;
