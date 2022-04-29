@@ -1,0 +1,188 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  background: #0c122c url("../images/bg-desktop.png") no-repeat right bottom;
+  background-size: 100%;
+  color: #dddbff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+@media screen and (max-width: 48rem) {
+  body {
+    background-color: transparent;
+    background-image: url("../images/bg-mobile.png");
+    background-size: cover;
+    background-position: center;
+    padding: 0 1.5rem;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  main {
+    width: 100%;
+  }
+}
+
+.data-storage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+}
+@media screen and (max-width: 48rem) {
+  .data-storage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .data-storage > * {
+    width: 100% !important;
+  }
+}
+.data-storage .icons {
+  background-color: #1d2c67;
+  padding: 2.2rem;
+  padding-right: 8.3rem;
+  border-radius: 0.8rem 6rem 0.8rem 0.8rem;
+}
+@media screen and (max-width: 48rem) {
+  .data-storage .icons {
+    padding-right: 2.2rem;
+  }
+}
+.data-storage .icons .flyo-logo {
+  width: 8.5rem;
+  margin-bottom: 2rem;
+}
+.data-storage .icons .flyo-logo img {
+  width: 100%;
+}
+.data-storage .icons .icon-list .icon-item:not(:last-child) {
+  margin-right: 1rem;
+}
+.data-storage .icons .icon-list .icon-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  background-color: #0c122c;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 15px;
+}
+.data-storage .storage {
+  background-color: #1d2c67;
+  border-radius: 0.8rem;
+  padding: 3rem 2.2rem;
+  position: relative;
+  width: 33.75rem;
+}
+.data-storage .storage .space-used {
+  margin-bottom: 1.125rem;
+}
+.data-storage .storage .space-used .space-used__text .number {
+  font-weight: bold;
+}
+.data-storage .storage .indicator {
+  background-color: #0c122c;
+  height: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.data-storage .storage .indicator .indicator-fill {
+  width: 75%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 100%;
+  border: 2px solid #0c122c;
+  border-radius: 2rem;
+  min-width: 1rem;
+  position: relative;
+}
+.data-storage .storage .indicator .indicator-fill::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  height: 60%;
+  top: 20%;
+  right: 0.15rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.data-storage .storage .limits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
+}
+.data-storage .storage .space-left {
+  position: absolute;
+  top: 0;
+  right: 2.2rem;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 1rem 1rem 0 1rem;
+}
+.data-storage .storage .space-left .space-left__text {
+  color: #848794;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+.data-storage .storage .space-left .space-left__text .number {
+  color: #1d2c67;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.data-storage .storage .space-left::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 98%;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-bottom: 27px solid transparent;
+  border-right: 19px solid white;
+}
+@media screen and (max-width: 48rem) {
+  .data-storage .storage .space-left {
+    border-radius: 1rem !important;
+    left: 50%;
+    top: 100%;
+    right: unset;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .data-storage .storage .space-left::after {
+    border: none;
+  }
+}
